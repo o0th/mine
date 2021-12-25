@@ -34,7 +34,9 @@ viewport.clampZoom({ minScale: 0.5, maxScale: 1 })
 const grid = Grid(viewport)
 grid.init()
 
-application.ticker.add(grid.tick)
+window.setInterval(grid.tick, 1000)
+
+// application.ticker.add(grid.tick)
 
 /** mount application */
 application.stage.addChild(viewport)
