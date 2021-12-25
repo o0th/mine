@@ -30,13 +30,12 @@ viewport.wheel()
 viewport.decelerate()
 viewport.clamp({ direction: 'all' })
 viewport.clampZoom({ minScale: 0.5, maxScale: 1 })
+viewport.sortableChildren = true
 
 const grid = Grid(viewport)
 grid.init()
 
 window.setInterval(grid.tick, 1000)
-
-// application.ticker.add(grid.tick)
 
 /** mount application */
 application.stage.addChild(viewport)
