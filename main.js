@@ -6,11 +6,14 @@ import { Viewport } from 'pixi-viewport'
 import { Settings } from './lib/settings'
 import { Grid } from './lib/grid'
 
+const width = window.innerWidth / window.devicePixelRatio
+const height = window.innerHeight / window.devicePixelRatio
+
 /** pixi-application */
 const application = new Application({
+  width,
+  height,
   resolution: window.devicePixelRatio,
-  width: window.innerWidth / window.devicePixelRatio,
-  height: window.innerHeight / window.devicePixelRatio,
   backgroundColor: Settings.background,
   autoResize: true,
   antialias: true
@@ -18,8 +21,8 @@ const application = new Application({
 
 /** pixi-viewport */
 const viewport = new Viewport({
-  screenWidth: window.innerWidth / window.devicePixelRatio,
-  screenHeight: window.innerHeight / window.devicePixelRatio,
+  screenWidth: width,
+  screenHeight: height,
   worldWidth: Settings.world.width * Settings.square,
   worldHeight: Settings.world.height * Settings.square,
   interaction: application.renderer.plugins.interaction
@@ -32,7 +35,7 @@ viewport.wheel()
 viewport.decelerate()
 viewport.clamp({ direction: 'all' })
 viewport.clampZoom({ minScale: 0.5, maxScale: 1 })
-viewport.position.set(window.innerWidth / 2, window.innerHeight / 2)
+viewport.position.set(width / 2, height / 2)
 viewport.sortableChildren = true
 
 const grid = Grid(viewport)
