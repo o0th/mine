@@ -32,6 +32,7 @@ viewport.wheel()
 viewport.decelerate()
 viewport.clamp({ direction: 'all' })
 viewport.clampZoom({ minScale: 0.5, maxScale: 1 })
+viewport.position.set(window.innerWidth / 2, window.innerHeight / 2)
 viewport.sortableChildren = true
 
 const grid = Grid(viewport)
