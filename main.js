@@ -9,6 +9,8 @@ import { Grid } from './lib/grid'
 /** pixi-application */
 const application = new Application({
   resolution: window.devicePixelRatio,
+  width: window.innerWidth / window.devicePixelRatio,
+  height: window.innerHeight / window.devicePixelRatio,
   backgroundColor: Settings.background,
   autoResize: true,
   antialias: true

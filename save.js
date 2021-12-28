@@ -8,7 +8,7 @@ export const Save = [
     { name: 'belt', model: 'mk1', input: 'left', output: 'right' },
     { name: 'belt', model: 'mk1', input: 'left', output: 'right' },
     { name: 'container', input: 'left' },
-    undefined,
+    undefined
   ],
   [
     undefined,
@@ -51,5 +51,5 @@ export const Save = [
     undefined
   ],
   [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined],
-  [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined],
+  [undefined, undefined, undefined, undefined, undefined, undefined, undefined, undefined]
 ]
